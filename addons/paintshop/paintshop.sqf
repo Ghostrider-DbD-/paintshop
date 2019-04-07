@@ -151,7 +151,7 @@ HALV_paintshop_selected = {
 				profileNamespace setVariable ["HALV_UNIFORMCOLOR",_alltex];
 			};
 		};
-		case (HALV_paintshop_vehicletopaint isKindOf "Constructions_static_F"):{
+		case (typeOf HALV_paintshop_vehicletopaint in ["Constructions_static_F","Buildable_Storage"]):{
 			diag_log format["paintshop: saving textures for building piece %1",HALV_paintshop_vehicletopaint];
 			HALV_paintshop_vehicletopaint call EPOCH_interact;
 		};
