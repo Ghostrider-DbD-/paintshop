@@ -151,15 +151,20 @@ HALV_paintshop_selected = {
 				profileNamespace setVariable ["HALV_UNIFORMCOLOR",_alltex];
 			};
 		};
+		case (HALV_paintshop_vehicletopaint isKindOf "Constructions_static_F"):{
+			diag_log format["paintshop: saving textures for building piece %1",HALV_paintshop_vehicletopaint];
+			HALV_paintshop_vehicletopaint call EPOCH_interact;
+		};
 		default{
 			if (HALV_paintshop_vehicletopaint getVariable ["VEHICLE_SLOT","ABORT"] != "ABORT")then{
 				if !(isPlayer HALV_paintshop_vehicletopaint)then{
-/*
+					HALV_paintshop_vehicletopaint call EPOCH_interact;
+					/*
 					HALV_vehsavetex = [player,HALV_paintshop_vehicletopaint];
 					publicVariableServer "HALV_vehsavetex";
-*/
+					*/
 				}else{
-//					titleText ["[SERVER]:\n*** VEHICLE PAINTJOB NOT SAVED! ***\nThere was a player in the vehicle!","PLAIN DOWN"];
+					titleText ["[SERVER]:\n*** VEHICLE PAINTJOB NOT SAVED! ***\nThere was a player in the vehicle!","PLAIN DOWN"];
 				};
 			};
 		};
