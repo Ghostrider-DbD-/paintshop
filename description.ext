@@ -1,0 +1,7 @@
+// Merge what appears below with your current description.ext
+
+//Add this only if not already present in your description.ext
+#include "addons\halv_spawn\Halv_defines.hpp"
+
+// always add this
+#include "addons\paintshop\paintshop.hpp"

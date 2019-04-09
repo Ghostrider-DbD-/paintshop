@@ -1,0 +1,8 @@
+Notes:
+
+This fork contains modifications made for my servers to add capability to save textures/colors for buildings and cars.
+The scripts should work out of the box. 
+ 
+Note that if you change anything and it does not work, there may be an error which you can detect by opening
+the client .RPT which is stored in appdata\local\Arma3. Check there for any script errors.
+
